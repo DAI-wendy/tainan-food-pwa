@@ -3,7 +3,7 @@
    改版時只要改 CACHE_VERSION，舊快取會自動清掉
    ========================================================= */
 
-const CACHE_VERSION = 'v1.0.0';
+const CACHE_VERSION = 'v1.1.0';
 const SHELL_CACHE   = `tainan-food-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `tainan-food-runtime-${CACHE_VERSION}`;
 
@@ -18,7 +18,15 @@ const SHELL_ASSETS = [
   './icons/maskable-512.png',
   './icons/apple-touch-icon.png',
   './icons/favicon.ico',
-  './icons/icon.svg'
+  './icons/icon.svg',
+
+  // 本地美食照片：預設抓 .jpg，若你的檔案是 .png / .webp 請一併改這裡
+  './picture/01.jpg',
+  './picture/02.jpg',
+  './picture/03.jpg',
+  './picture/04.jpg',
+  './picture/05.jpg',
+  './picture/06.jpg'
 ];
 
 /* 這些 CDN 第一次載入後就快取起來（Tailwind、字型、Font Awesome） */
@@ -109,7 +117,7 @@ async function cacheFirst(request, cacheName, fallback) {
 // 先給快取、背景默默更新（CDN 與圖片最適合）
 async function staleWhileRevalidate(request, cacheName, fallback) {
   const cache = await caches.open(cacheName);
-  const cached = await cache.match(request);
+  const cached = await caches.match(request);   // 跨所有快取找，含預快取的本地圖片
 
   const network = fetch(request)
     .then((res) => {

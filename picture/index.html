@@ -2,54 +2,17 @@
 <html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <!-- ============ PWA ============ -->
-    <meta name="description" content="台南網紅打卡必吃、暗黑獵奇美食一次看完，每週更新的在地美食報報。">
-    <meta name="theme-color" content="#f97316">
-    <meta name="color-scheme" content="light">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="icons/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
-    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-    <meta name="application-name" content="府城新食代">
-    <meta name="apple-mobile-web-app-title" content="府城新食代">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="format-detection" content="telephone=no">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="府城新食代 - 台南新奇美食報報">
-    <meta property="og:description" content="台南網紅打卡必吃、暗黑獵奇美食一次看完。">
-    <meta property="og:image" content="icons/icon-512.png">
-    <meta name="twitter:card" content="summary_large_image">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台南新奇美食報報 - 網紅打卡必吃</title>
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7D0E34RXV"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQEE2PLNR8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-F7D0E34RXV');
-    </script>
-
-
-    <script>
-    /* 圖片副檔名自動偵測：picture/01.png 找不到就依序試 jpeg / png / webp / JPG，
-       全部失敗才用線上示意圖。想固定副檔名可把 PIC_EXT 只留一個。 */
-    var PIC_EXT = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'PNG'];
-    function picFallback(img) {
-        var i = parseInt(img.dataset.extIdx || '0', 10) + 1;
-        if (i < PIC_EXT.length) {
-            img.dataset.extIdx = i;
-            img.src = 'picture/' + img.dataset.pic + '.' + PIC_EXT[i];
-        } else {
-            img.onerror = null;
-            img.src = img.dataset.fallback;
-        }
-    }
+      gtag('config', 'G-JQEE2PLNR8');
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -69,54 +32,6 @@
         .food-card:hover img {
             transform: scale(1.05);
         }
-        /* ---------- PWA ---------- */
-        @media (display-mode: standalone), (display-mode: fullscreen) {
-            #navbar { padding-top: env(safe-area-inset-top, 0px); }
-            body { padding-bottom: env(safe-area-inset-bottom, 0px); }
-            .pwa-hide-in-app { display: none !important; }
-        }
-        #pwa-install-btn {
-            position: fixed;
-            right: 1rem;
-            bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-            z-index: 90;
-            display: none;
-            align-items: center;
-            gap: .5rem;
-            padding: .75rem 1.25rem;
-            border-radius: 9999px;
-            background: linear-gradient(135deg, #f97316, #facc15);
-            color: #fff;
-            font-weight: 700;
-            box-shadow: 0 10px 25px -5px rgba(249, 115, 22, .5);
-            border: none;
-            cursor: pointer;
-            animation: pwa-pop .4s ease-out;
-        }
-        #pwa-install-btn:hover { filter: brightness(1.05); transform: translateY(-2px); }
-        #pwa-install-btn { transition: transform .2s, filter .2s; }
-        @keyframes pwa-pop {
-            from { opacity: 0; transform: translateY(20px) scale(.9); }
-            to   { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        #pwa-toast {
-            position: fixed;
-            left: 50%;
-            top: calc(4.5rem + env(safe-area-inset-top, 0px));
-            transform: translate(-50%, -150%);
-            z-index: 110;
-            padding: .6rem 1.25rem;
-            border-radius: 9999px;
-            background: #1f2937;
-            color: #fff;
-            font-size: .875rem;
-            font-weight: 500;
-            box-shadow: 0 8px 20px rgba(0,0,0,.25);
-            transition: transform .35s cubic-bezier(.2,.8,.2,1);
-            white-space: nowrap;
-        }
-        #pwa-toast.show { transform: translate(-50%, 0); }
-
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -195,7 +110,7 @@
                 <!-- Food Card 1 -->
                 <div class="food-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="picture/01.png" data-pic="01" data-fallback="https://placehold.co/800x600/ffe4e6/be123c?text=Strawberry+Cake" alt="草莓瀑布千層蛋糕" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500" onerror="picFallback(this)">
+                        <img src="image_944ac1.jpg" alt="土石流草莓千層" class="w-full h-full object-cover transition-transform duration-500">
                         <div class="food-img-overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
                             <div class="p-6 w-full text-white">
                                 <p class="text-sm font-medium mb-1"><i class="fa-solid fa-location-dot mr-1 text-orange-400"></i> 中西區 國華街</p>
@@ -221,7 +136,7 @@
                 <!-- Food Card 2 -->
                 <div class="food-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="picture/02.png" data-pic="02" data-fallback="https://placehold.co/800x600/e0f2fe/0369a1?text=Seafood+Rice" alt="海膽爆卵滷肉飯" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500" onerror="picFallback(this)">
+                        <img src="image_94563f.jpg" alt="海膽爆卵滷肉飯" class="w-full h-full object-cover transition-transform duration-500">
                         <div class="food-img-overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
                             <div class="p-6 w-full text-white">
                                 <p class="text-sm font-medium mb-1"><i class="fa-solid fa-location-dot mr-1 text-orange-400"></i> 安平區</p>
@@ -247,7 +162,7 @@
                 <!-- Food Card 3 -->
                 <div class="food-card bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 group">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="picture/03.png" data-pic="03" data-fallback="https://placehold.co/800x600/dcfce7/15803d?text=Matcha+Dessert" alt="抹茶恐龍蛋" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500" onerror="picFallback(this)">
+                        <img src="image_9452bc.jpg" alt="抹茶恐龍蛋" class="w-full h-full object-cover transition-transform duration-500">
                         <div class="food-img-overlay absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity duration-300 flex items-end">
                             <div class="p-6 w-full text-white">
                                 <p class="text-sm font-medium mb-1"><i class="fa-solid fa-location-dot mr-1 text-orange-400"></i> 東區 成大商圈</p>
@@ -284,7 +199,7 @@
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="w-full lg:w-1/2">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700 group">
-                        <img src="picture/04.png" data-pic="04" data-fallback="https://placehold.co/800x600/1f2937/9ca3af?text=Dark+Pudding" alt="皮蛋焦糖布丁冰" loading="lazy" decoding="async" class="w-full h-auto object-cover transform group-hover:scale-105 transition-duration-700" onerror="picFallback(this)">
+                        <img src="image_94b71c.jpg" alt="皮蛋布丁冰" class="w-full h-auto object-cover transform group-hover:scale-105 transition-duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider mb-2 inline-block">勇者限定</span>
@@ -314,24 +229,21 @@
                         </div>
                     </div>
 
+                    <!-- 補上另外兩道獵奇美食的圖片 -->
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden hover:border-red-500 transition-colors group">
-                            <div class="aspect-[4/3] overflow-hidden bg-gray-900">
-                                <img src="picture/05.png" data-pic="05" data-fallback="https://placehold.co/600x450/1f2937/9ca3af?text=Macaron" alt="麻辣鴨血馬卡龍" loading="lazy" decoding="async" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="picFallback(this)">
+                        <div class="bg-gray-800 p-3 rounded-xl border border-gray-700 group">
+                            <div class="aspect-square rounded-lg overflow-hidden mb-3">
+                                <img src="image_94b740.jpg" alt="麻辣鴨血馬卡龍" class="w-full h-full object-cover transform group-hover:scale-110 transition-duration-500">
                             </div>
-                            <div class="p-4">
-                                <h5 class="font-bold text-white mb-1">麻辣鴨血馬卡龍</h5>
-                                <p class="text-xs text-gray-400">中西式融合最高境界，內餡是辣味麻辣鍋底醬！</p>
-                            </div>
+                            <h5 class="font-bold text-white mb-1 text-sm group-hover:text-red-400 transition-colors">麻辣鴨血馬卡龍</h5>
+                            <p class="text-xs text-gray-400 line-clamp-2">中西式融合最高境界，內餡是辣味麻辣鍋底醬！</p>
                         </div>
-                        <div class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden hover:border-red-500 transition-colors group">
-                            <div class="aspect-[4/3] overflow-hidden bg-gray-900">
-                                <img src="picture/06.png" data-pic="06" data-fallback="https://placehold.co/600x450/1f2937/9ca3af?text=Pizza" alt="香菜滿漢全席披薩" loading="lazy" decoding="async" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" onerror="picFallback(this)">
+                        <div class="bg-gray-800 p-3 rounded-xl border border-gray-700 group">
+                            <div class="aspect-square rounded-lg overflow-hidden mb-3">
+                                <img src="image_94b75e.jpg" alt="香菜滿漢全席披薩" class="w-full h-full object-cover transform group-hover:scale-110 transition-duration-500">
                             </div>
-                            <div class="p-4">
-                                <h5 class="font-bold text-white mb-1">香菜滿漢全席披薩</h5>
-                                <p class="text-xs text-gray-400">底醬是香菜泥，鋪滿新鮮香菜與皮蛋，反香菜聯盟崩潰。</p>
-                            </div>
+                            <h5 class="font-bold text-white mb-1 text-sm group-hover:text-green-400 transition-colors">香菜滿漢全席披薩</h5>
+                            <p class="text-xs text-gray-400 line-clamp-2">底醬是香菜泥，鋪滿新鮮香菜與皮蛋，反香菜聯盟崩潰。</p>
                         </div>
                     </div>
                 </div>
@@ -479,119 +391,5 @@
             });
         });
     </script>
-
-    <!-- ============ PWA 元件 ============ -->
-    <button id="pwa-install-btn" type="button" aria-label="安裝應用程式">
-        <i class="fa-solid fa-mobile-screen-button"></i>
-        <span>安裝 App</span>
-    </button>
-    <div id="pwa-toast" role="status" aria-live="polite"></div>
-
-    <script>
-    /* ============ PWA：Service Worker 註冊、安裝提示、離線偵測 ============ */
-    (function () {
-        'use strict';
-
-        var installBtn = document.getElementById('pwa-install-btn');
-        var toastEl = document.getElementById('pwa-toast');
-        var toastTimer = null;
-
-        function toast(msg, ms) {
-            toastEl.textContent = msg;
-            toastEl.classList.add('show');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(function () {
-                toastEl.classList.remove('show');
-            }, ms || 3000);
-        }
-
-        function isStandalone() {
-            return window.matchMedia('(display-mode: standalone)').matches ||
-                   window.navigator.standalone === true;
-        }
-
-        function isIOS() {
-            return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
-                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        }
-
-        /* ---------- 1. 註冊 Service Worker ---------- */
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('sw.js', { scope: './' })
-                    .then(function (reg) {
-                        // 偵測到新版本
-                        reg.addEventListener('updatefound', function () {
-                            var sw = reg.installing;
-                            if (!sw) return;
-                            sw.addEventListener('statechange', function () {
-                                if (sw.state === 'installed' && navigator.serviceWorker.controller) {
-                                    if (typeof showMessageModal === 'function') {
-                                        showMessageModal('網站有新版本，重新整理後即可更新。', 'info');
-                                    }
-                                    sw.postMessage('SKIP_WAITING');
-                                }
-                            });
-                        });
-                        // 每小時檢查一次更新
-                        setInterval(function () { reg.update(); }, 60 * 60 * 1000);
-                    })
-                    .catch(function (err) {
-                        console.warn('[PWA] Service Worker 註冊失敗：', err);
-                    });
-
-                var refreshing = false;
-                navigator.serviceWorker.addEventListener('controllerchange', function () {
-                    if (refreshing) return;
-                    refreshing = true;
-                    window.location.reload();
-                });
-            });
-        }
-
-        /* ---------- 2. Android / 桌面：安裝提示 ---------- */
-        var deferredPrompt = null;
-
-        window.addEventListener('beforeinstallprompt', function (e) {
-            e.preventDefault();
-            deferredPrompt = e;
-            if (!isStandalone()) installBtn.style.display = 'inline-flex';
-        });
-
-        installBtn.addEventListener('click', function () {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then(function (choice) {
-                    if (choice.outcome === 'accepted') installBtn.style.display = 'none';
-                    deferredPrompt = null;
-                });
-            } else if (isIOS() && typeof showMessageModal === 'function') {
-                showMessageModal('請點畫面下方的「分享」按鈕，選擇「加入主畫面」，就能把美食報報裝到手機上囉！', 'info');
-            }
-        });
-
-        window.addEventListener('appinstalled', function () {
-            installBtn.style.display = 'none';
-            deferredPrompt = null;
-            toast('安裝完成，開胃！');
-        });
-
-        /* ---------- 3. iOS：沒有 beforeinstallprompt，改給教學 ---------- */
-        if (isIOS() && !isStandalone()) {
-            setTimeout(function () {
-                if (!deferredPrompt) installBtn.style.display = 'inline-flex';
-            }, 4000);
-        }
-
-        /* ---------- 4. 連線狀態 ---------- */
-        window.addEventListener('offline', function () {
-            toast('已離線，顯示的是先前存下的內容', 4000);
-        });
-        window.addEventListener('online', function () {
-            toast('已恢復連線');
-        });
-    })();
-    </script>
 </body>
-
 </html>
